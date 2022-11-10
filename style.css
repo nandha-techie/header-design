@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, transparent, blue), url("images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 0 5%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.logo, .logo i{
+    font-size: 20px;
+    color: white;
+}
+.logo i, .btn i {
+    rotate: -90deg;
+}
+ul{
+    list-style: none;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    margin-right: 30px;
+}
+.nav-links li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.nav-links li a:hover, .nav-links li .active{
+    color: pink;
+}
+.btn{
+    background-color: blueviolet;
+    padding: 8px 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+.content{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    top: 40%;
+    transform: translateY(-55%);
+    color: whitesmoke;
+}
+.content h1{
+    margin: 20px 0;
+    font-weight: bold;
+}
+.content p{
+    margin-bottom: 20px;
+}
+.search{
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.search input[type="text"]{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 70%;
+    padding-right: 3px;
+    font-size: 18px;
+}
+.search input[type="submit"]{
+    width: 30%;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    background-color: rgb(210, 21, 144);
+    border-radius: 3px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+#menu-bar{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+#menu-bar i.fas{
+    font-size: 30px;
+    color: white;
+}
+@media only screen and (max-width: 768px){
+    #menu-bar{
+        display: block;
+    }
+    .header{
+        padding: 0
+    }
+    .navbar{
+        position: relative;
+    }
+    .nav-links{
+        padding-top: 50px;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: -999px;
+        background-color: rgb(44, 7, 146);
+        z-index: 999;
+        transition: 0.8s ease;
+    }
+    .nav-links li{
+        margin-top: 20px;
+    }
+    .nav-links li a{
+        font-size: 20px;
+    }
+    .mobile-view{
+        top: 0;
+    }
+    .btn{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .content{
+        width: 80%;
+    }
+
+}
